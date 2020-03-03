@@ -10,7 +10,7 @@ This is not maintained anymore.<br>
 
 ## Comparison
 
-[Original Page](http://www.koga-cs.ibk.ed.jp)
+[Original Page](http://www.koga-cs.ibk.ed.jp)<br>
 [New Page](https://kss-new.a01sa01to.com)
 
 ## Problem of Original Page
