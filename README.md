@@ -31,3 +31,8 @@ This is not maintained anymore.<br>
 
 This repo is under the MIT License.<br>
 See [LICENSE](https://github.com/a01sa01to/KSS-New/blob/master/LICENSE) File.
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/a01sa01to/KSS-New/badge.svg?style=beer-square)](https://beerpay.io/a01sa01to/KSS-New)  [![Beerpay](https://beerpay.io/a01sa01to/KSS-New/make-wish.svg?style=flat-square)](https://beerpay.io/a01sa01to/KSS-New?focus=wish)
