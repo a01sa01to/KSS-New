@@ -1,0 +1,25 @@
+.division_3{
+    display: grid;
+    grid-template-areas: "A . B . C";
+    grid-template-columns: 30% 5% 30% 5% 30%;
+    text-align: center;
+}
+.division_3 img{
+    width: 100%;
+}
+.division_3 > *:nth-child(1) {
+    grid-area: A;
+}
+.division_3 > *:nth-child(2){
+    grid-area: B;
+}
+.division_3 > *:nth-child(3){
+    grid-area: C;
+}
+@media screen and (max-width: 700px){
+    .division_3{
+        grid-template-areas: "A" "border1" "B" "border2" "C";
+        grid-template-columns: 100%;
+        grid-template-rows: max-content 20px max-content 20px max-content;
+    }
+}

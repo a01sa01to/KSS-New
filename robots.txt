@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /about/
+Disallow: /ags/
+Allow: /blog/
+Disallow: /error/
+Disallow: /fonts/
+Allow: /for_elementary/
+Disallow: /for_graduator/
+Allow: /for_student/
+Allow: /life/
+Disallow: /medicine/
+Disallow: /pta/
+Allow: /img/badge_whiteCircle.png
+Allow: /success/
+Allow: /univ/
+Allow: /cr.ex.li.pr
+Allow: /index.html
+Disallow: /template.txt
+
+User-agent: Googlebot-Image
+User-agent: MSNBot-Media
+Disallow: /img/
+
+Sitemap: https://kss-new.a01sa01to.com/sitemap.xml
+Sitemap: https://kss-new.a01sa01to.com/about/sitemap.xml
+Sitemap: https://kss-new.a01sa01to.com/life/sitemap.xml
+Sitemap: https://kss-new.a01sa01to.com/for_elementary/sitemap.xml
+Sitemap: https://kss-new.a01sa01to.com/for_student/sitemap.xml
+Sitemap: https://kss-new.a01sa01to.com/success/sitemap.xml
+Sitemap: https://kss-new.a01sa01to.com/univ/sitemap.xml

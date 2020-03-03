@@ -1,0 +1,257 @@
+/* Image Loader */
+imgload{
+    display: block;
+    width: 150px;
+    height: 100px;
+    font-size: 12px;
+    margin: 8px;
+    background-color: #ccc;
+    background-image: url("/img/loader.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px #333 solid;
+    position: relative;
+}
+imgload::after{
+    content: "Loading Image...";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+/* END */
+
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+Rounded+1c|Noto+Sans+JP|Poppins|Sawarabi+Mincho&display=swap');
+
+main *{
+    --clr: #333;
+    font-size: 16px;
+    color: var(--clr);
+}
+
+html{
+    font-family: "Poppins", 'Kosugi Maru', 'M PLUS Rounded 1c', "Noto Sans Japanese", sans-serif;
+    font-weight: lighter;
+}
+body{
+    margin: 0px;
+    margin-top: 8px;
+}
+main{
+    margin: 8px;
+    margin-top: 50px;
+    margin-left: 64px;
+    padding: 12px;
+    max-width: 100vw;
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+}
+ul li{
+    list-style: circle;
+}
+main img{
+    margin: 12px;
+}
+img.center{
+    display: block;
+    margin: auto;
+}
+
+p.spliter{
+    font-size: 18px;
+    /* background: #68ae96; */
+    background: #e3e3e3;
+    /* border-left: 10px #2c7663 solid; */
+    border-left: 10px #808080 solid;
+    font-weight: 300;
+    /* color: #fff; */
+    color: #5c666b;
+    padding: 3px 10px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+main .column p.spliter{
+    background: none;
+    border: 0px;
+    border-bottom: 3px #b20100 solid;
+    padding-bottom: 0px;
+    height: 20px;
+    color: #555;
+    font-weight: 600;
+}
+
+p.border{
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+.column{
+    padding: 8px;
+    margin: 3px;
+    margin-bottom: 20px;
+}
+.column .big{
+    font-size: 20px;
+}
+.column .big *{
+    font-size: initial;
+}
+a{
+    color: #666;
+}
+a.button{
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 15px;
+    margin: 4px auto;
+    text-align: center;
+    text-decoration: none;
+}
+span.news{
+    font-size: 36px;
+    color: #006fc1;
+    text-align: center;
+}
+span.news li{
+    display: inline-block;
+    padding: 10px;
+    font-size: 48px;
+}
+span.news span{
+    font-size: 28px;
+}
+span.news#emp{ /*Emphasize "強調する"の略*/
+    font-size:36px;
+    color: #f00;
+}
+td.layout{
+    margin: 5px;
+    padding: 8px;
+}
+.clearFloat{
+    clear: both;
+    overflow: hidden;
+}
+.floatLeft{ float: left; }
+.floatRight{ float: right; }
+.motto{
+    font-family: 'Sawarabi Mincho', sans-serif !important;
+}
+.motto.creation{
+    color: #f40806;
+}
+.motto.challenge{
+    color: #0473c2;
+}
+.motto.contribution{
+    color: #e9cc18;
+}
+iframe{
+    width: 100%;
+    height: 500px;
+}
+iframe.video{
+    width: 640px;
+    height: 360px;
+}
+.important{
+    color: #ff3232;
+}
+.notice{
+    color: #3232fe;
+}
+.important *{ color: var(--clr); }
+.notice *{ color: var(--clr); }
+
+main div.video{
+    border: 1px #aaa solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+main div.video img{
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+main div.video a{
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+}
+
+p.ttl{
+    font-size: 22px;
+    text-align: center;
+}
+p.date{
+    text-align: right;
+    font-size: 14px;
+    color: #888;
+}
+ul.msg{
+    text-align: center;
+    margin: auto;
+    width: max-content;
+    max-width: calc(100% - 45px);
+}
+ul.msg li{
+    text-align: left;
+}
+p.msg{
+    text-align: center;
+}
+main .column p.imgScroll{
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 700px){
+    main{
+        margin: 46px 0 0 0;
+    }
+    main img{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+    table td{
+        display: block;
+    }
+    span.news{
+        font-size: 6vw;
+    }
+    span.news li{
+        font-size: 11vw;
+        padding: 0px;
+    }
+    span.news#emp{ /*Emphasize "強調する"の略*/
+        font-size: 10vw !important;
+    }
+    a.button{
+        padding: 4px 8px;
+    }
+    iframe.video{
+        width: 100%;
+        height: 56vw;
+    }
+    img{
+        width: 100%;
+        float: none;
+    }
+    main .imgScroll.imgContainer img{
+        height: 400px;
+        width: auto;
+    }
+    main .column .imgScroll.imgContainer{
+        width: 100%;
+        overflow-x: auto;
+    }
+    main .column p.imgScroll:after{
+        content: "※左右にスクロールできます。";
+    }
+}

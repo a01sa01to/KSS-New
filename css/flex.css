@@ -1,0 +1,24 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+.flex > *{
+    width: 380px;
+    height: auto;
+    padding: 20px 0;
+    border-top: 2px #ddd solid;
+}
+.flex img{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px){
+    .flex{
+        display: block;
+    }
+    .flex > *{
+        width: 100%;
+    }
+}

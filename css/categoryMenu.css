@@ -1,0 +1,32 @@
+#categoryMenu h2{
+    font-size: 24px;
+}
+#categoryMenu ul{
+    list-style: none;
+    padding: 0;
+    clear: both;
+    overflow: hidden;
+}
+#categoryMenu li{
+    display: flex;
+    float: left;
+    vertical-align: middle;
+    text-align: left;
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    background: #eee;
+    color: #555;
+    border: #555 2px solid;
+}
+#categoryMenu a{
+    text-decoration: none;
+}
+#categoryMenu li::before{
+    content: " ▶ ";
+    color: #777;
+    font-size: 14px;
+}
+#categoryMenu li:hover{
+    background: #ccc;
+}

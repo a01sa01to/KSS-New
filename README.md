@@ -5,7 +5,8 @@
 ## What's this?
 
 I made Webpage of my school(Koga Secondary School).<br>
-[View](https://kss-new.a01sa01to.com)
+This is not maintained anymore.<br>
+[Let's View!](https://kss-new.a01sa01to.com)
 
 ## Comparison
 

@@ -1,0 +1,28 @@
+.sbsContainer{  /* Side by Side : 横並び */
+    display: grid;
+    grid-template-columns: 48% 4% 48% ;
+    grid-template-areas: "item1 . item2";
+    margin: 8px auto;
+}
+.sbsContainer > *{
+    width: 100%;
+    box-sizing: border-box;
+}
+.sbsContainer > *:nth-child(1){
+    grid-area: item1;
+}
+.sbsContainer > *:nth-child(2){
+    grid-area: item2;
+}
+
+@media screen and (max-width: 700px){
+    .sbsContainer{
+        grid-template-columns: 100%;
+        grid-template-areas: "item1" "item2";
+        margin: auto;
+    }
+    .sbsContainer > *{
+        margin: 8px auto;
+        width: 100%;
+    }
+}
