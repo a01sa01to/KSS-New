@@ -17,12 +17,12 @@ jobs:
           name: Update npm
           command: 'sudo npm i -g npm@latest'
       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          key: dependency-cache-{{ checksum "blog/package-lock.json" }}
       - run:
           name: Install deps
           command: npm i
       - save_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          key: dependency-cache-{{ checksum "blog/package-lock.json" }}
           paths:
             - ./node_modules
       - run:
