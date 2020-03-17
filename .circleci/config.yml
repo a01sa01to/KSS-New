@@ -8,7 +8,6 @@ jobs:
     docker:
       - image: circleci/node:10.16.3
       - image: mongo:4.2.0
-    working_directory: ~/project/blog
     steps:
       - checkout
       - run:
@@ -18,11 +17,11 @@ jobs:
           key: dependency-cache-{{ checksum "blog/package-lock.json" }}
       - run:
           name: Install deps
-          command: npm i
+          command: 'cd blog && npm i'
       - save_cache:
           key: dependency-cache-{{ checksum "blog/package-lock.json" }}
           paths:
             - ./node_modules
       - run:
           name: Build
-          command: npm run build
+          command: 'cd blog && npm run build'
