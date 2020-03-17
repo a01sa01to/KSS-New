@@ -5,12 +5,14 @@ orbs:
 
 jobs:
   build:
-    working_directory: ~/KSS-New/blog
     docker:
       - image: circleci/node:10.16.3
       - image: mongo:4.2.0
     steps:
       - checkout
+      - run:
+          name: Change Directory
+          command: cd blog
       - run:
           name: Update npm
           command: 'sudo npm i -g npm@latest'
