@@ -3,7 +3,7 @@ pull_request_rules:
     conditions:
       - "status-success=ci/circleci: build"
       - base=master
-      - files=/blog/package.json
+      - files=blog/package.json
       - "#files=1"
     actions:
       delete_head_branch:
@@ -15,7 +15,7 @@ pull_request_rules:
     conditions:
       - "status-success=ci/circleci: build"
       - base=master
-      - files=/blog/package-lock.json
+      - files=blog/package-lock.json
       - "#files=1"
     actions:
       delete_head_branch:
@@ -27,8 +27,8 @@ pull_request_rules:
     conditions:
       - "status-success=ci/circleci: build"
       - base=master
-      - files=/blog/package.json
-      - files=/blog/package-lock.json
+      - files=blog/package.json
+      - files=blog/package-lock.json
       - "#files=2"
     actions:
       delete_head_branch:
