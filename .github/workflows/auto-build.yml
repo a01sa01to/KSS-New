@@ -1,6 +1,8 @@
 name: Auto Build
 
-on: push
+on:
+  push:
+    paths-ignore: bundle.js
 
 jobs:
   auto-build:
