@@ -1,0 +1,37 @@
+name: Auto Upgrade
+
+on:
+  schedule:
+    - cron: '0 12 * * 0'
+
+jobs:
+  auto-build:
+    name: Upgrade
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: npm or yarn
+        run: '(test -f package-lock.json && echo npm) || echo yarn'
+
+      - name: Upgrade package.json
+        run: |
+          (test -f package-lock.json && npm i -g npm-check-updates && ncu -u) || yarn upgrade --latest
+      - name: Update package-lock.json
+        run: '(test -f package-lock.json && npm i) || yarn install'
+      - name: Commit
+        uses: zwaldowski/git-commit-action@v1
+        with:
+          commit_message: Automatic Build
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master

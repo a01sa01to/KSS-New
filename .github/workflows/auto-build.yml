@@ -1,0 +1,33 @@
+name: Auto Build
+
+on: push
+
+jobs:
+  auto-build:
+    name: Build
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: npm or yarn
+        run: '(test -f package-lock.json && echo npm) || echo yarn'
+      - name: Install dependencies
+        run: '(test -f package-lock.json && npm i) || yarn install'
+      - name: Build
+        run: '(test -f package-lock.json && npm run build) || yarn build'
+      - name: Commit
+        uses: zwaldowski/git-commit-action@v1
+        with:
+          commit_message: Automatic Build
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
