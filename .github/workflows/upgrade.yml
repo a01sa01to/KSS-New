@@ -2,7 +2,7 @@ name: Auto Upgrade
 
 on:
   schedule:
-    - cron: '0 12 * * 0'
+    - cron: '0 3 * * 0'
 
 jobs:
   auto-build:
@@ -18,14 +18,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - name: npm or yarn
-        run: '(test -f package-lock.json && echo npm) || echo yarn'
-
       - name: Upgrade package.json
-        run: |
-          (test -f package-lock.json && npm i -g npm-check-updates && ncu -u) || yarn upgrade --latest
+        run: 'npm i -g npm-check-updates && ncu -u'
+        working-directory: ./blog
       - name: Update package-lock.json
-        run: '(test -f package-lock.json && npm i) || yarn install'
+        run: npm i
+        working-directory: ./blog
+      - name: Build
+        run: npm run build
+        working-directory: ./blog
       - name: Commit
         uses: zwaldowski/git-commit-action@v1
         with:
