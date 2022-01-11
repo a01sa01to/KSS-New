@@ -30,30 +30,30 @@ function headerMenuUpdate(){
 	}
 }
 
-window.addEventListener("load", ()=>{
-	fetch('/cookieconsent_3.1.0/cookieconsent.min.js').then(r=>r.text()).then(t=>eval(t)).then(()=>{
-		window.cookieconsent.initialise({
-			"palette": {
-				"popup": {
-				"background": "#f3f3f3",
-				"text": "#222"
-				},
-				"button": {
-				"background": "#2d7764",
-				"text": "#ffffff"
-				}
-			},
-			"theme": "edgeless",
-			"content": {
-				"message": "当サイトでは、利便性の向上を目的として、Cookieを使用しています。引き続き当サイトを利用・閲覧することで、Cookieの使用に同意したことになります。",
-				"dismiss": "同意して続ける",
-				"link": "詳しくはこちらをご覧ください。(外部サイト・英語)"
-				// "message": "本サイトは、古河中等生が、Σリサーチの一環として作成したものです。席を離れる前に、アンケートにご協力ください。",
-				// "dismiss": "続ける"
-			}
-		})
-	});
-});
+// window.addEventListener("load", ()=>{
+// 	fetch('/cookieconsent_3.1.0/cookieconsent.min.js').then(r=>r.text()).then(t=>eval(t)).then(()=>{
+// 		window.cookieconsent.initialise({
+// 			"palette": {
+// 				"popup": {
+// 				"background": "#f3f3f3",
+// 				"text": "#222"
+// 				},
+// 				"button": {
+// 				"background": "#2d7764",
+// 				"text": "#ffffff"
+// 				}
+// 			},
+// 			"theme": "edgeless",
+// 			"content": {
+// 				"message": "当サイトでは、利便性の向上を目的として、Cookieを使用しています。引き続き当サイトを利用・閲覧することで、Cookieの使用に同意したことになります。",
+// 				"dismiss": "同意して続ける",
+// 				"link": "詳しくはこちらをご覧ください。(外部サイト・英語)"
+// 				// "message": "本サイトは、古河中等生が、Σリサーチの一環として作成したものです。席を離れる前に、アンケートにご協力ください。",
+// 				// "dismiss": "続ける"
+// 			}
+// 		})
+// 	});
+// });
 
 // Title
 document.title += " - 茨城県立古河中等教育学校ホームページ New";
